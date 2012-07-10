@@ -8,11 +8,14 @@ gem 'rails', '3.1.0'
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 # gem 'sqlite3'
-gem 'sqlite3', '1.3.5'
+# gem 'sqlite3', '1.3.5'
 # gem 'sqlite3-ruby', '1.2.5', :group => :development
 # gem 'sqlite3-ruby', '1.2.5', :require => 'sqlite3', :group => :development
 # gem 'sqlite3-ruby', '1.2.5', :require => 'sqlite3'
 
+group :development do
+  gem 'sqlite3', '1.3.5'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -41,5 +44,5 @@ end
 # NC add: see http://stackoverflow.com/questions/7542745
 group :production do
   # gems specifically for Heroku go here
-  gem "pg"
+  gem "pg", '0.12.2'
 end
