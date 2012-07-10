@@ -1,6 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.0'
+# gem 'rails', '3.0.1'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
@@ -34,4 +35,10 @@ gem 'jquery-rails'
 group :test do
   # Pretty printed test output
   gem 'turn', :require => false
+end
+
+# NC add: see http://stackoverflow.com/questions/7542745
+group :production do
+  # gems specifically for Heroku go here
+  gem "pg"
 end
